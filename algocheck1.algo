@@ -1,0 +1,35 @@
+  
+ALGORITHM comt-ph
+VAR
+    i , mots, voyelle, characters : INTEGER := 0;
+    ph : STRING;
+BEGIN
+    ph := "some text."
+    WHILE ( ph[i] <> "." ) DO
+
+            IF (ph[i] = "a" or ph[i] = "A" or
+                ph[i] = "e" or ph[i] = "E" or
+                ph[i] = "i" or ph[i] = "I" or
+                ph[i] = "o" or ph[i] = "O" or
+                ph[i] = "u" or ph[i] = "U" or
+                ph[i] = "y" or ph[i] = "Y" or
+            ) THEN
+                voyelle := voyelle + 1;
+            END_IF
+
+            IF (ph[i] = " ") THEN
+                mots := mots + 1;
+            END_IF
+
+            IF (ph[i] <> " ") THEN
+                characters := characters + 1 
+            END_IF
+
+        i := i+1;
+
+    END_WHILE
+    mots := most + 1;
+    Write(mots);
+    Write(voyelle);
+    Write(characters); 
+END
